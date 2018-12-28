@@ -1,0 +1,14 @@
+{
+    TIPO: Quando
+    VERBO: estrear
+    NOMES: Harry , Potter , 2
+    RESPOSTA: 2009
+}
+{
+    TIPO: teste2
+    VERBO: teste2
+    NOMES: teste2
+    RESPOSTA: teste2
+}
+
+Quando - estrear - Harry , Potter , 2
