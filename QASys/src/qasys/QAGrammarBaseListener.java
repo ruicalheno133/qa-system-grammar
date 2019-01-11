@@ -1,7 +1,9 @@
-// Generated from /Users/ruipedro/Desktop/Universidade/Ano 4/Perfis/PLC/GCS/Trabalho/QASys/src/qasys/QAGrammar.g4 by ANTLR 4.2.2
+// Generated from /Users/ruipedro/Desktop/Universidade/Ano 4/Perfis/PLC/GCS/Trabalho/gcs1819/QASys/src/qasys/QAGrammar.g4 by ANTLR 4.2.2
 package qasys;
 
     import java.util.HashMap;
+    import java.util.List;
+    import java.util.ArrayList;
 
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -40,6 +42,45 @@ public class QAGrammarBaseListener implements QAGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTipo(@NotNull QAGrammarParser.TipoContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterListaAssociacoes(@NotNull QAGrammarParser.ListaAssociacoesContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitListaAssociacoes(@NotNull QAGrammarParser.ListaAssociacoesContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInfinitivos(@NotNull QAGrammarParser.InfinitivosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInfinitivos(@NotNull QAGrammarParser.InfinitivosContext ctx) { }
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssociacao(@NotNull QAGrammarParser.AssociacaoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssociacao(@NotNull QAGrammarParser.AssociacaoContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
@@ -92,19 +133,6 @@ public class QAGrammarBaseListener implements QAGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitQuestoes(@NotNull QAGrammarParser.QuestoesContext ctx) { }
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterNomesQuestao(@NotNull QAGrammarParser.NomesQuestaoContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNomesQuestao(@NotNull QAGrammarParser.NomesQuestaoContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

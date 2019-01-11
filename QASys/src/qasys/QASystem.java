@@ -36,7 +36,7 @@ public class QASystem {
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
 		QAGrammarParser parser = new QAGrammarParser(tokens);
 		ParseTree tree = parser.qas();
-		System.out.println("árvore: " + tree.toStringTree(parser));
+		//System.out.println("árvore: " + tree.toStringTree(parser));
     }
     
     

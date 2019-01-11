@@ -1,7 +1,9 @@
-// Generated from /Users/ruipedro/Desktop/Universidade/Ano 4/Perfis/PLC/GCS/Trabalho/QASys/src/qasys/QAGrammar.g4 by ANTLR 4.2.2
+// Generated from /Users/ruipedro/Desktop/Universidade/Ano 4/Perfis/PLC/GCS/Trabalho/gcs1819/QASys/src/qasys/QAGrammar.g4 by ANTLR 4.2.2
 package qasys;
 
     import java.util.HashMap;
+    import java.util.List;
+    import java.util.ArrayList;
 
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
@@ -27,6 +29,27 @@ public interface QAGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitTipo(@NotNull QAGrammarParser.TipoContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link QAGrammarParser#listaAssociacoes}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitListaAssociacoes(@NotNull QAGrammarParser.ListaAssociacoesContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link QAGrammarParser#infinitivos}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInfinitivos(@NotNull QAGrammarParser.InfinitivosContext ctx);
+
+	/**
+	 * Visit a parse tree produced by {@link QAGrammarParser#associacao}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssociacao(@NotNull QAGrammarParser.AssociacaoContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link QAGrammarParser#entrada}.
@@ -55,13 +78,6 @@ public interface QAGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitQuestoes(@NotNull QAGrammarParser.QuestoesContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link QAGrammarParser#nomesQuestao}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitNomesQuestao(@NotNull QAGrammarParser.NomesQuestaoContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link QAGrammarParser#listaNomes}.

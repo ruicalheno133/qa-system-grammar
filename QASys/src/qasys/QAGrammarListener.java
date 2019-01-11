@@ -1,7 +1,9 @@
-// Generated from /Users/ruipedro/Desktop/Universidade/Ano 4/Perfis/PLC/GCS/Trabalho/QASys/src/qasys/QAGrammar.g4 by ANTLR 4.2.2
+// Generated from /Users/ruipedro/Desktop/Universidade/Ano 4/Perfis/PLC/GCS/Trabalho/gcs1819/QASys/src/qasys/QAGrammar.g4 by ANTLR 4.2.2
 package qasys;
 
     import java.util.HashMap;
+    import java.util.List;
+    import java.util.ArrayList;
 
 import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
@@ -32,6 +34,39 @@ public interface QAGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTipo(@NotNull QAGrammarParser.TipoContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link QAGrammarParser#listaAssociacoes}.
+	 * @param ctx the parse tree
+	 */
+	void enterListaAssociacoes(@NotNull QAGrammarParser.ListaAssociacoesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link QAGrammarParser#listaAssociacoes}.
+	 * @param ctx the parse tree
+	 */
+	void exitListaAssociacoes(@NotNull QAGrammarParser.ListaAssociacoesContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link QAGrammarParser#infinitivos}.
+	 * @param ctx the parse tree
+	 */
+	void enterInfinitivos(@NotNull QAGrammarParser.InfinitivosContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link QAGrammarParser#infinitivos}.
+	 * @param ctx the parse tree
+	 */
+	void exitInfinitivos(@NotNull QAGrammarParser.InfinitivosContext ctx);
+
+	/**
+	 * Enter a parse tree produced by {@link QAGrammarParser#associacao}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssociacao(@NotNull QAGrammarParser.AssociacaoContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link QAGrammarParser#associacao}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssociacao(@NotNull QAGrammarParser.AssociacaoContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link QAGrammarParser#entrada}.
@@ -76,17 +111,6 @@ public interface QAGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitQuestoes(@NotNull QAGrammarParser.QuestoesContext ctx);
-
-	/**
-	 * Enter a parse tree produced by {@link QAGrammarParser#nomesQuestao}.
-	 * @param ctx the parse tree
-	 */
-	void enterNomesQuestao(@NotNull QAGrammarParser.NomesQuestaoContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link QAGrammarParser#nomesQuestao}.
-	 * @param ctx the parse tree
-	 */
-	void exitNomesQuestao(@NotNull QAGrammarParser.NomesQuestaoContext ctx);
 
 	/**
 	 * Enter a parse tree produced by {@link QAGrammarParser#listaNomes}.

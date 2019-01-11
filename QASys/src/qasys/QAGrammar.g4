@@ -16,10 +16,13 @@ grammar QAGrammar;
 
 @header {
     import java.util.HashMap;
+    import java.util.List;
+    import java.util.ArrayList;
 }
 
 @members {   
           HashMap<Pergunta, String> db = new HashMap<>();
+          Infinitivos infinitivos = new Infinitivos();
           
           void adicionaEntrada (Pergunta pergunta, String resposta){
               db.put(pergunta, resposta);
@@ -38,12 +41,33 @@ grammar QAGrammar;
             }
            
           }
+          
+          void imprimirSolucao(String tipo, String verbo, List<String> nomes, String resposta){
+              System.out.print("Pergunta: ");
+              System.out.print(tipo + " " + verbo + " ");
+              for (String nome : nomes)
+                System.out.print(nome + " ");
+              System.out.println("?");
+              System.out.println("Resposta: " + resposta);                                                                             
+          }
                                           
 }
 
-qas: db questoes?; 
+qas: infinitivos db questoes?; 
 
-db : entrada entrada*
+infinitivos: 'INFINITIVOS:' listaAssociacoes;
+
+listaAssociacoes: (associacao ';' {
+                                   infinitivos.addInfinitivo($associacao.infinit, $associacao.listaVerbos);
+                                   })+ ;
+
+associacao returns [String infinit, List<String> listaVerbos]
+@init {$associacao.listaVerbos = new ArrayList<>();}: 
+         infinitivo=TEXT {$associacao.infinit = $infinitivo.text;}'-' (verbos=TEXT {
+                                                                                  $associacao.listaVerbos.add($verbos.text);
+                                                                                  })+ ;
+
+db : 'DB:' entrada entrada*
     {
         //imprimeDB(); 
     };
@@ -56,45 +80,42 @@ entrada returns [Pergunta p, String r]:
             adicionaEntrada(p, $resposta.texto);
          };
 
-tipo returns [String texto]: 'TIPO: ' STR {$tipo.texto = $STR.text;};
+tipo returns [String texto]: 'TIPO: ' TEXT {$tipo.texto = $TEXT.text;};
 
-verbo returns [String texto]: 'VERBO: ' STR {$verbo.texto = $STR.text;};
+verbo returns [String texto]: 'VERBO: ' TEXT {$verbo.texto = $TEXT.text;};
 
 nomes returns [List<String> lista]: 
             'NOMES: ' listaNomes {$nomes.lista = $listaNomes.lista; };
             
 listaNomes returns [List<String> lista]:                                
-          n1=STR 
+          n1=TEXT 
           {
            $listaNomes.lista = new ArrayList<String>();
            $listaNomes.lista.add($n1.text);
           } 
-          (',' n2=STR 
+          (n2=TEXT 
           {
            $listaNomes.lista.add($n2.text);
           })*;
 
 resposta returns [String texto]: 'RESPOSTA: ' STR {$resposta.texto = $STR.text;};
 
-questoes: questao*;
+questoes: 'QUESTOES:' (questao '?')*;
 
-questao: t=STR '-' v=STR '-' listaNomes
+questao: t=TEXT '-' v=TEXT '-' listaNomes
          {
-          Pergunta pergunta = new Pergunta($t.text, $v.text, $listaNomes.lista);
+          String infinitivo = infinitivos.getInfinitivo($v.text);
+          Pergunta pergunta = new Pergunta($t.text, infinitivo, $listaNomes.lista);
           String resposta = obtemResposta(pergunta);
-          System.out.println("Pergunta:\n" + pergunta + "\nResposta: " + resposta); 
-         };
-
-nomesQuestao returns [List<String> texto] :n1=STR {$nomesQuestao.texto = new ArrayList<String>();$nomesQuestao.texto.add($n1.text);} 
-                                    (',' n2=STR {$nomesQuestao.texto.add($n2.text);})* ;
+          imprimirSolucao($t.text, $v.text, $listaNomes.lista, resposta);
+          
+         }; 
 
 
 /* Analisador Léxico */
 
-//STR:    (('\''|'\"') ~('\''|'\"')* ('\''|'\"')); 
+STR:    (('\''|'\"') ~('\''|'\"')* ('\''|'\"')); 
 
-STR: [a-zA-Z0-9]+;
-
-JSON: [a-zA-Z]+'.json';
+TEXT: [a-zA-Z0-9]+;
 
 SEPARADOR: ('\r'? '\n' | ' ' | '\t')+  -> skip;

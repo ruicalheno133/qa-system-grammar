@@ -1,14 +1,23 @@
+INFINITIVOS:
+    estrear - estreou estreia;
+    participar - participa participou;
+    ser - e foi;
+    
+DB:
 {
     TIPO: Quando
     VERBO: estrear
-    NOMES: Harry , Potter , 2
-    RESPOSTA: 2009
+    NOMES: Harry Potter 2
+    RESPOSTA: '2009'
 }
 {
-    TIPO: teste2
-    VERBO: teste2
-    NOMES: teste2
-    RESPOSTA: teste2
+    TIPO: Quem
+    VERBO: ser
+    NOMES: ator principal Harry Potter
+    RESPOSTA: 'Daniel Radcliffe'
 }
 
-Quando - estrear - Harry , Potter , 2
+QUESTOES:
+Quando - estreou - Harry Potter 2 ?
+Quem - e - ator principal Harry Potter ?
+Quando - estreia - Harry Potter 2 ?
