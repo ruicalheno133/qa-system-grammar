@@ -45,6 +45,13 @@ public interface QAGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	T visitInfinitivos(@NotNull QAGrammarParser.InfinitivosContext ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link QAGrammarParser#pergunta}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPergunta(@NotNull QAGrammarParser.PerguntaContext ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link QAGrammarParser#associacao}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -66,6 +73,13 @@ public interface QAGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	T visitResposta(@NotNull QAGrammarParser.RespostaContext ctx);
 
 	/**
+	 * Visit a parse tree produced by {@link QAGrammarParser#perguntas}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPerguntas(@NotNull QAGrammarParser.PerguntasContext ctx);
+
+	/**
 	 * Visit a parse tree produced by {@link QAGrammarParser#nomes}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -73,25 +87,11 @@ public interface QAGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	T visitNomes(@NotNull QAGrammarParser.NomesContext ctx);
 
 	/**
-	 * Visit a parse tree produced by {@link QAGrammarParser#questoes}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQuestoes(@NotNull QAGrammarParser.QuestoesContext ctx);
-
-	/**
 	 * Visit a parse tree produced by {@link QAGrammarParser#listaNomes}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitListaNomes(@NotNull QAGrammarParser.ListaNomesContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link QAGrammarParser#questao}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQuestao(@NotNull QAGrammarParser.QuestaoContext ctx);
 
 	/**
 	 * Visit a parse tree produced by {@link QAGrammarParser#db}.

@@ -17,6 +17,12 @@ DB:
     RESPOSTA: 'Daniel Radcliffe'
 }
 
+<<<<<<< HEAD
 QUESTOES:
 Quando - estreou - Harry Potter e a Camara dos Segredos ?
 Quem - e - ator principal Harry Potter ?
+=======
+PERGUNTAS:
+Quando - estreou - Harry Potter 4 ?
+
+>>>>>>> fe453583c53d2786f5c402816a65a1ab4c0deb6b
