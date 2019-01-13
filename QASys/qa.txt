@@ -17,7 +17,6 @@ DB:
     RESPOSTA: 'Daniel Radcliffe'
 }
 
-QUESTOES:
-Quando - estreou - Harry Potter 2 ?
-Quem - e - ator principal Harry Potter ?
-Quando - estreia - Harry Potter 2 ?
+PERGUNTAS:
+Quando - estreou - Harry Potter 4 ?
+

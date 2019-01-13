@@ -47,5 +47,4 @@ public class Pergunta {
         result = 31 * result + this.nomes.hashCode();
         return result;
     }
-
 }
