@@ -1,7 +1,7 @@
 INFINITIVOS:
     estrear - estreou estreia;
     participar - participa participou;
-    ser - e foi;
+    ser - é foi;
     
 DB:
 {
@@ -18,5 +18,6 @@ DB:
 }
 
 PERGUNTAS:
-Quando - estreou - Harry Potter 4 ?
+Quando - estreou - Harry Potter 2?
+Quem - é - ator principal Harry Potter ?
 

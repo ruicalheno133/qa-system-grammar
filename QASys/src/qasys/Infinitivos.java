@@ -23,6 +23,6 @@ public class Infinitivos {
             }
         }
         
-        return null;
+        return "Not Found";
     }
 }

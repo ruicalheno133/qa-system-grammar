@@ -110,6 +110,6 @@ pergunta: tipoP=TEXT '-' verboP=TEXT '-' listaNomes
 
 STR:    (('\''|'\"') ~('\''|'\"')* ('\''|'\"')); 
 
-TEXT: [a-zA-Z0-9]+;
+TEXT: [a-zA-Z0-9áéíóúàèìòùãõç]+;
 
 SEPARADOR: ('\r'? '\n' | ' ' | '\t')+  -> skip;
