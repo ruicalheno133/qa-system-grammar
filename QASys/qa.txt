@@ -7,8 +7,8 @@ DB:
 {
     TIPO: Quando
     VERBO: estrear
-    NOMES: Harry Potter 2
-    RESPOSTA: '2009'
+    NOMES: Harry Potter e a Camara dos Segredos
+    RESPOSTA: '2002'
 }
 {
     TIPO: Quem
@@ -18,6 +18,5 @@ DB:
 }
 
 QUESTOES:
-Quando - estreou - Harry Potter 2 ?
+Quando - estreou - Harry Potter e a Camara dos Segredos ?
 Quem - e - ator principal Harry Potter ?
-Quando - estreia - Harry Potter 2 ?
