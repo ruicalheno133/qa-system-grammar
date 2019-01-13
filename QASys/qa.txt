@@ -7,8 +7,8 @@ DB:
 {
     TIPO: Quando
     VERBO: estrear
-    NOMES: Harry Potter 2
-    RESPOSTA: '2009'
+    NOMES: Harry Potter e a Camara dos Segredos
+    RESPOSTA: '2002'
 }
 {
     TIPO: Quem
@@ -17,7 +17,13 @@ DB:
     RESPOSTA: 'Daniel Radcliffe'
 }
 
+<<<<<<< HEAD
+QUESTOES:
+Quando - estreou - Harry Potter e a Camara dos Segredos ?
+Quem - e - ator principal Harry Potter ?
+=======
 PERGUNTAS:
 Quando - estreou - Harry Potter 2?
 Quem - é - ator principal Harry Potter ?
 
+>>>>>>> fe453583c53d2786f5c402816a65a1ab4c0deb6b
